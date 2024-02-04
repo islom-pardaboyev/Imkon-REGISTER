@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imkon | Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body style="color: white;" class="flex bg-[#131E28] items-center h-[100vh] justify-center">
+    <div class="containerr">
+      <form id="form" class="bg-[#3F474C] w-[500px] rounded-[10px] p-[30px]" action="">
+        <h1 class="font-semibold text-[26px] leading-[28px]">Kirish</h1>
+        <div class="flex flex-col mt-[20px]">
+          <label for="" class="font-medium text-[13px] leading-[18px] mb-[5px] select-none">Login</label>
+          <div class="flex">
+            <select
+              id="countries"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[20%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option selected>Davlat</option>
+              <option value="Uzb">Uzb</option>
+              <option value="Ru">Ru</option>
+              <option value="Us">US</option>
+            </select>
+          <input maxlength="17" id="inputOne" class="bg-[#343C42] border-[#343C41] border-2 focus:border-[#1285FA] px-[10px] py-[5px] rounded-md w-full outline-none" type="text" placeholder="Pochta yoki telefon raqamingizni kitiring"/>
+          </div>
+          <p class="select-none text-[12px]" id="alert-p1"></p>
+        </div>
+        <div class="inputBox relative mt-[20px]">
+          <div class="flex items-center justify-between">
+            <label for="" class="font-medium text-[13px] leading-[18px] select-none">Parolni</label>
+            <p class="font-semibold text-[13px] leading-[18px] select-none text-[#9FA2A5]">Parolni unutdingizmi?</p>
+          </div>
+          <div class="input-box p-[5px] flex">
+            <input id="inputTwo" maxlength="8" type="password" placeholder="password" class="bg-[#343C42] w-full border-[#343C41] border-2 focus:border-[#1285FA] px-[10px] py-[5px] rounded-md outline-none" id="password">
+            <img class="w-[35px] bg-[#343C42] duration-200 cursor-pointer" id="eyeicon" src="./eye_open.svg" alt=""><br>
+          </div>
+          <p class="text-[12px]" id="alert-p2"></p>
+          <button type="submit" id="elBtn" class="my-[20px] bg-[#1285FA] py-[5px] w-[100%]">Tizimga kiring</button>
+          <div class="flex items-center justify-between">
+            <span class="bg-[#7C8083] w-[45%] h-px inline-block"></span>
+            <p class="font-bold  text-[12px] text-[#9FA2A5] leading-[16px]">Yoki</p>
+            <span class="bg-[#7C8083] w-[45%] h-px inline-block"></span>
+          </div>
+          <div class="my-[20px]">
+            <div class="flex items-center mb-[15px] justify-evenly">
+                <i class="fa-brands hover:bg-white hover:text-red-600 duraton-200 bg-[#707579] p-3 rounded-lg fa-google"></i>
+                <i class="fa-brands hover:bg-white hover:text-red-600 duraton-200 bg-[#707579] p-3 rounded-lg fa-google"></i>
+                <i class="fa-brands hover:bg-white hover:text-red-600 duraton-200 bg-[#707579] p-3 rounded-lg fa-google"></i>
+                <i class="fa-brands hover:bg-white hover:text-red-600 duraton-200 bg-[#707579] p-3 rounded-lg fa-google"></i>
+                <i class="fa-brands hover:bg-white hover:text-red-600 duraton-200 bg-[#707579] p-3 rounded-lg fa-google"></i>
+                <i class="fa-brands hover:bg-white hover:text-red-600 duraton-200 bg-[#707579] p-3 rounded-lg fa-google"></i>
+            </div>
+            <div class="font-medium text-[12px] leading-[16px] text-center ">
+                <p>Orqali kiring</p>
+            </div>
+          </div>
+        </div>
+        <label for="password">Password:</label>
+        <input style="color: black;" type="password" id="password" name="password">
+        <input type="checkbox" id="show-password"> Show Password
+      </form>
+
+      <div class="px-[30px] py-[10px] bg-[#3F474C] rounded-[10px] flex items-center justify-between mt-[30px]">
+        <p class="text-[#A1A5A9] font-normal text-[13px] leading-[16px]">Tarmoqda yangimisiz?</p>
+        <a class="p-3 bg-[#39434B] rounded-md font-normal text-[13px] leading-[16px]" href="./register.html">Ro'yxatdan o'tish</a>
+      </div>
+
+
+    </div>
+
+    <div class="popup-container active grid grid-cols-12">
+      <div class="col-span-6">
+          <i class='bx bx-check text-[10rem] text-[#22c55e]'></i>
+      </div>
+      <div class="flex items-center justify-center col-span-5">
+          <p class="text-[#22c55e] text-center text-[2rem]">Xush Kelibsiz</p>
+      </div>
+      <div class="col-span-1 close-icon">
+          <i class='bx bx-x'></i>
+      </div>
+     </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>
