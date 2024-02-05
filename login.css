@@ -16,22 +16,6 @@
 }
 
 
-
-.popup-container{
-    transition: all .5s;
-    position: fixed;
-    color: rgb(0, 255, 0);
-    background-color: white;
-    width: 500px;
-    height: 250px;
-    top: 30%;
-    border: 3px solid blue;
-    outline: 3px solid white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}
-
 .popup-container h1{
     font-size: 8rem;
     display: flex;
@@ -57,10 +41,18 @@
   visibility: hidden;
   opacity: 0;
   top: 10%;
-} .popup-container{
+} 
+
+.popup-container{
+    position: fixed;
+    color: rgb(0, 255, 0);
+    background-color: white;
+    width: 500px;
+    height: 250px;
+    padding: 20px;
     position: fixed;
     border: 2px solid rgb(0, 17, 255);
-    transition: .5s ease;
+    transition: all .5s ease;
     outline: 2px solid white;
     left: 50%;
     transform: translateX(-50%);
@@ -69,7 +61,6 @@
     height: 200px;
     top: 30%;
     display: flex;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     color: black;
@@ -77,24 +68,23 @@
 .info{
     display: flex;
 }
+
 .close-btn{
     position: absolute;
     cursor: pointer;
 }
+
 .bx-x{
     font-size: 25px;
     color: rgb(0, 17, 255);
 }
+
 .bx-x:hover{
     cursor: pointer;
     color: black;
     transition: .3s ease;
 }
-.active.popup-container{
-    visibility: hidden;
-    opacity: 0;
-    top: 10%;
-}
+
 .active.containerr {
     filter: blur(5px) brightness(0.7);
     transition: .5s ease;

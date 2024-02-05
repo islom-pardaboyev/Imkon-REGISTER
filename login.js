@@ -6,8 +6,24 @@ const alertP1 = document.getElementById("alert-p1")
 const elCountries = document.getElementById("countries")
 const elBtn = document.getElementById("elBtn")
 
+const containerEl = document.querySelector(".containerr");
+const popupContainerEl = document.querySelector(".popup-container");
+const closeIconEl = document.querySelector(".close-icon");
+
+elBtn.addEventListener('click', () => {
+    if (elInput1.value.length === 17 && elInput2.value.length === 8) {
+        containerEl.classList.add("active");
+        popupContainerEl.classList.remove("active");
+    }
+});
+
+closeIconEl.addEventListener("click", () => {
+    containerEl.classList.remove("active");
+    popupContainerEl.classList.add("active");
+});
+
 function countries(input1) {
-    if (elCountries.value === "Uzb") {
+    if (input1.value.length === 17) {
         input1.value = "+998";
     }
 }
@@ -46,22 +62,6 @@ function validateInput(inputEl1, inputEl2) {
     }
 }
 
-const containerEl = document.querySelector(".containerr");
-const popupContainerEl = document.querySelector(".popup-container");
-const closeIconEl = document.querySelector(".close-icon");
-
-elBtn.addEventListener('click', () => {
-    if (elInput1.value.length === 17 && elInput2.value.length === 8) {
-        containerEl.classList.add("active");
-        popupContainerEl.classList.remove("active");
-    }
-});
-
-closeIconEl.addEventListener("click", () => {
-    containerEl.classList.remove("active");
-    popupContainerEl.classList.add("active");
-});
-
 elForm.addEventListener("submit", (e) => {
     e.preventDefault()
 
@@ -69,10 +69,6 @@ elForm.addEventListener("submit", (e) => {
 })
 
 
-elBtn.addEventListener("submit", (e) => {
-    e.preventDefault()
-
-})
 
 document.getElementById('show-password').addEventListener('change', function () {
     var passwordInput = document.getElementById('password');

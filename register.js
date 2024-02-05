@@ -5,6 +5,22 @@ const elInput3 = document.getElementById("inputThree")
 const alertP1 = document.getElementById("alert-p1")
 const alertP2 = document.getElementById("alert-p2")
 const alertP3 = document.getElementById("alert-p3")
+const containerEl = document.querySelector(".containerr");
+const popupContainerEl = document.querySelector(".popup-container");
+const closeIconEl = document.querySelector(".close-icon");
+
+elForm.addEventListener('submit', () => {
+    if (elInput1.value.length >= 1 && elInput2.value.length >= 1 && elInput3.value.length >= 1) {
+        containerEl.classList.add("active");
+        popupContainerEl.classList.remove("active");
+    }
+});
+
+closeIconEl.addEventListener("click", () => {
+    containerEl.classList.remove("active");
+    popupContainerEl.classList.add("active");
+});
+
 
 function  validateInput(inputEl1,inputEl2, inputEl3) {
     const inputValue1 = inputEl1.value.trim()
